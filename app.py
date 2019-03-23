@@ -11,7 +11,7 @@ import requests
 from flask import Flask, request
 
 app = Flask(__name__)
-PAGE_ACCESS_TOKEN = "EAAHZAErTAOQQBAEC4VACIHam094JVRQ3TuwZAFVJU5HXJFsZCo9VSKhZCL1r9Bjnx6dBwPyLSltwX3QqaXylj2ZCo8gHosIjZANqrRTLLAHvXQiPAA6Vp1MMRqh5WKgsM4yqiCzXO2d1ZCTCa4GZBCwfjk2Y40N8HYEZAXmZC9nqoCM9UASd1HR2ZA9"
+PAGE_ACCESS_TOKEN = "EAAHZAErTAOQQBALrqCBVYr5LkkSLm8ngNI6DLaHSGopNsk8RhZC9Oq0hjBgjsTqsGy0gyMZAAHRsjg9Aotmm8KW1R1z9ZCcduPZA2WnM1FYouXOW71O1LtMYbsaAxrS98BhTFyr33eoP4o4JusTZCXIqLBLeYox5ZAQi7jFhHcNONEEKZCqZAwFC2"
 bot = Bot(PAGE_ACCESS_TOKEN)
 
 @app.route('/', methods=['GET'])
@@ -58,7 +58,7 @@ def webhook():
 					if 'text' in messaging_event['message']:
 						messaging_text = messaging_event['message']['text']
 						if messaging_text == "Trước khi bắt đầu hãy xem lại video demo chatbot này":
-							response = "https://www.youtube.com"
+							response = "https://www.youtube.com/watch?v=5Fz59xhS49U&feature=youtu.be"
 							bot.send_text_message(sender_id, response)
 							bot.send_button_message(sender_id,"Bạn nên chọn những options này thay vì tự nhập",button_list)
 						elif messaging_text == "Thông tin về tôi":
